@@ -143,6 +143,10 @@ body {
     padding-left: 10px;
 }
 
+.cv-link {
+    color: white;
+}
+
 /* media queres */
 @media(max-width:780px){
     .grid-2{
