@@ -3,8 +3,10 @@
 
 .grid-2 {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Make left column twice as wide as right */
+    grid-template-columns: 1.5fr 1fr; /* Make columns more balanced */
     gap: 2rem;
+    height: 100vh;
+    align-items: start;
 }
 
 body {
@@ -13,23 +15,28 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #101214;
     color: #7A7C80;
+    height: 100vh;
 }
 
 .main-content {
-    max-width: 1400px; /* Increased from 700px */
+    max-width: 1600px; /* Increased from 1400px */
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 1rem;
     text-align: center;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 .social-links {
-    margin: 1rem 0 2rem 0;
+    margin: 0.25rem 0 0.5rem 0;
 }
 
 .social-links a {
     color: #7A7C80;
-    font-size: 2rem;
-    margin: 0 10px;
+    font-size: 1.8rem; /* Slightly smaller */
+    margin: 0 8px;
     transition: color 0.2s;
 }
 
@@ -39,12 +46,12 @@ body {
 
 .embeds {
     width: 100%;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1rem auto;
 }
 
 .embed-row {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     align-items: stretch;
     width: 100%;
@@ -56,22 +63,22 @@ body {
     min-width: 0;
     max-width: none;   /* Remove max-width restriction */
     width: 100%;
-    height: 380px;
+    height: 280px; /* Reduced from 300px */
 }
 
 .embed-youtube {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 560px;      /* Limit width to standard YouTube embed size */
+    max-width: 500px;      /* Slightly smaller */
     aspect-ratio: 16 / 9;  /* Maintain 16:9 aspect ratio */
     height: auto;
 }
 
 .embeds iframe {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     max-width: 100%;
     border: none;
     display: block;
@@ -162,14 +169,119 @@ body {
         padding-top: 2rem;
     }
 }
-/* Responsive: stack on small screens */
-@media (max-width: 900px) {
-    .embed-row {
-        flex-direction: column;
+
+/* Recommendations Section */
+.recommendations {
+    text-align: left;
+    margin: 0.5rem 0;
+}
+
+.recommendations-header {
+    margin-bottom: 0.5rem;
+}
+
+.recommendations-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+}
+
+.linkedin-link {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.linkedin-link:hover {
+    color: #005885;
+    text-decoration: underline;
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.recommendation {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.recommendation:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.rec-header {
+    margin-bottom: 0.75rem;
+}
+
+.rec-header h4 {
+    margin: 0 0 3px 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.rec-title {
+    margin: 0 0 3px 0;
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.rec-date {
+    margin: 0;
+    color: #666;
+    font-size: 0.75rem;
+}
+
+.rec-content {
+    line-height: 1.5;
+}
+
+.rec-content p {
+    margin: 0 0 8px 0;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.rec-content p:last-child {
+    margin-bottom: 0;
+}
+
+.read-more-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.read-more-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments for recommendations */
+@media (max-width: 780px) {
+    .recommendations-grid {
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
-    .embed-spotify,
-    .embed-soundcloud {
-        width: 100%;
+    
+    .recommendation {
+        padding: 1.25rem;
     }
 }
