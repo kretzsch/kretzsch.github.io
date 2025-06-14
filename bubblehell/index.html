@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Bubble Hell Video...</title>
+    
+    <!-- Meta refresh redirect as fallback -->
+    <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=VS6DOImqG2Q">
+    
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://www.youtube.com">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #101214;
+            color: #7A7C80;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        
+        .redirect-container {
+            max-width: 400px;
+            padding: 2rem;
+        }
+        
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #ff0000;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .youtube-link {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .youtube-link:hover {
+            color: #ff4444;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="spinner"></div>
+        <h1>Redirecting to Bubble Hell...</h1>
+        <p>You're being redirected to Thomas Kretzschmar's Bubble Hell video on YouTube.</p>
+        <p>If you're not redirected automatically, <a href="https://www.youtube.com/watch?v=VS6DOImqG2Q" class="youtube-link">click here</a>.</p>
+    </div>
+
+    <script>
+        // Immediate JavaScript redirect (fastest method)
+        window.location.replace("https://www.youtube.com/watch?v=VS6DOImqG2Q");
+    </script>
+</body>
+</html>
